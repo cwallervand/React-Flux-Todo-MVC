@@ -4,7 +4,7 @@ require("babel/polyfill");
 let Express = require('express');
 let app = Express();
 let React = require('react');
-let MainComponent = React.createFactory(require('./dist_ES5/components/main'));
+let MainComponent = React.createFactory(require('./dist_ES5/components/TodoApp'));
 
 // Set view paths
 app.set('views', './app/views')
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   });
 });
 
-let server = app.listen(8080, ()  => {
+let server = app.listen(8080, () => {
 
   let host = server.address().address;
   let port = server.address().port;

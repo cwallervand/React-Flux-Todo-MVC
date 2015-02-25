@@ -1,11 +1,11 @@
 'use strict';
 
 let React = require('react');
-let MainComponent = React.createFactory(require('./components/main'));
+let TodoApp = React.createFactory(require('./components/TodoApp'));
 
 let renderComponent = function(){
   let mountNode = document.getElementById('app-container');
-  React.render(MainComponent(), mountNode);
+  React.render(TodoApp(), mountNode);
 };
 
 if (typeof window !== 'undefined') {

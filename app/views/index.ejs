@@ -5,12 +5,25 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <script src="www/js/app.js"></script>
+
     <title>TODO</title>
   </head>
   <body>
-      <div id="app-container">
-        <%- main %>
+      <div id="main-container">
+
+        <header id="site-header">
+          <h1>TODOS</h1>
+        </header>
+
+        <div id="app-container">
+          <%- main %>
+        </div>
+
+        <footer id="info">
+          <p>Some information here</p>
+        </footer>
+        
       </div>
+      <script src="www/js/app.js"></script>
   </body>
 </html>
