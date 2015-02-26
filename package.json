@@ -17,8 +17,7 @@
     "Babel",
     "Gulp",
     "Express",
-    "Isomorphic",
-    "Jest"
+    "Isomorphic"
   ],
   "author": "Christian Wallervand",
   "license": "ISC",
@@ -35,7 +34,6 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.3",
     "gulp-uglify": "^1.1.0",
-    "jest": "^0.1.37",
     "node-sass": "^2.0.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
@@ -44,6 +42,7 @@
     "ejs": "^2.2.4",
     "express": "^4.11.2",
     "flux": "^2.0.1",
+    "keymirror": "^0.1.1",
     "react": "^0.12.2"
   }
 }

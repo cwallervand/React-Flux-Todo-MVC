@@ -7,13 +7,11 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'), //Converting Sass to CSS
     rename = require('gulp-rename'), //Renaming of files
     server = require('gulp-express'); //Plugin for Express app-server
-    //browserSync = require('browser-sync');
 
 var devPaths = {
   app: {
     js: {
       path: 'app/js',
-      //components: 'dist_ES5/components',
       client: 'dist_ES5/client.js'
     },
     sass: {
@@ -29,8 +27,7 @@ var devPaths = {
     css: 'www/css'
   },
   dist_ES5: {
-    path: 'dist_ES5',
-    //components: 'dist_ES5/components'
+    path: 'dist_ES5'
   }
 };
 
@@ -45,15 +42,6 @@ gulp.task('build_css', function() {
     .pipe(sass())
     .pipe(rename('app.css'))
     .pipe(gulp.dest(devPaths.www.css));
-    //.pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./www/"
-        }
-    });
 });
 
 //Produces a single js file for the browser with all app dependencies
@@ -82,7 +70,7 @@ gulp.task('es5ify', function() {
 //Wathces changes on files and executes task when changes are detected
 gulp.task('watch', function() {
   gulp.watch([devPaths.server], ['es5ify', 'server']);
-  gulp.watch([devPaths.app.js.path+'/client.js', devPaths.app.js.path+'/**/*.js'], ['es5ify', 'build_js', 'server']);
+  gulp.watch([devPaths.app.js.path+'/**/*.js', devPaths.app.js.path+'/client.js'], ['es5ify', 'build_js', 'server']);
   gulp.watch([devPaths.app.sass.path+'/*.scss'], ['build_css']);
 });
 
