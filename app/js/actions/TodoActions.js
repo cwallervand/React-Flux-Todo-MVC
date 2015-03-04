@@ -1,5 +1,6 @@
 let AppDispatcher = require('../dispatcher/AppDispatcher'),
-    TodoConstants = require('../constants/TodoConstants');
+    TodoConstants = require('../constants/TodoConstants'),
+    TodoConstants_Action_Names = require('../constants/TodoConstants').actionNames;
 
 //Define different actions of the app
 let TodoActions = {
@@ -8,7 +9,7 @@ let TodoActions = {
     //Dispatch a message with a type and a payload
     AppDispatcher.dispatch({
       //The name of the action
-      actionType: TodoConstants.actionNames.TODO_CREATE,
+      actionType: TodoConstants.TODO_CREATE,
       //The payload to send
       text: todoText
     });

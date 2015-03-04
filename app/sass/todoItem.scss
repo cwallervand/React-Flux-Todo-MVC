@@ -1,0 +1,9 @@
+.todo-item {
+
+  padding: 10px;
+  background: #EEE;
+
+  &:not(:first-child) {
+    border-top: 1px dashed #CCC;
+  }
+}

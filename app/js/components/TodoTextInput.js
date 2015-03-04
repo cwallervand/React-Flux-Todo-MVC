@@ -20,7 +20,6 @@ let TodoTextInput = React.createClass({
   },
   //Save the todo with the value (state)
   _save() {
-    console.log('TodoTextInput _save()');
     this.props.onSave(this.state.value);
     //After saving set the value back to an empty string
     this.setState({
@@ -35,7 +34,6 @@ let TodoTextInput = React.createClass({
   //When enter is pressed we want to save the todo
   _onKeyDown(event) {
     if (event.keyCode === KEY_CODE_ENTER) {
-      console.log('TodoTextInput _onKeyDown() ENTERS')
       this._save();
     }
   },

@@ -5,7 +5,6 @@ let React = require('react'),
 let Header = React.createClass({
   _onSave(todoText) {
     if (todoText.trim() !== '') {
-      console.log('Header: _onSave()');
       TodoActions.create(todoText);
     }
   },

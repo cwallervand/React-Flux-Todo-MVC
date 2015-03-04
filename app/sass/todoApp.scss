@@ -1,10 +1,17 @@
 @import './header.scss';
 @import './todoTextInput.scss';
+@import './todoItem.scss';
 
 body {
   background: #DDD;
   margin: 0;
   font-family: "Courier New";
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
   #main-container {
     width: 100%;
